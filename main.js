@@ -3,6 +3,7 @@ let soruAlani = document.querySelector("#soruAlani");
 let soruUret = document.querySelector("#soruUret");
 let soruKopyala = document.querySelector("#soruKopyala");
 let basarili = document.querySelector("#basarili");
+let soruAdeti = document.querySelector("#soruAdeti");
 const sorular = [];
 function soruSayisiUret() {
     return Math.floor(Math.random() * sorular.length);
@@ -23,6 +24,7 @@ xhr.onload = function() {
   
   // Site açıldığında rastgele bir soru gösterir
   soruAlani.innerHTML = sorular[soruSayisiUret()];
+  soruAdeti.value = "Güncel soru sayımı " + sorular.length;
 
 };
 
