@@ -24,7 +24,7 @@ xhr.onload = function() {
   
   // Site açıldığında rastgele bir soru gösterir
   soruAlani.innerHTML = sorular[soruSayisiUret()];
-  soruAdeti.value = "Güncel soru sayımı " + sorular.length;
+  soruAdeti.innerHTML = "Güncel soru sayısı :  " + sorular.length;
 
 };
 
