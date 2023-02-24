@@ -20,15 +20,13 @@ xhr.onload = function() {
   for (let soru in sorularObj) {
     sorular.push(sorularObj[soru]);
   }
+  
+  // Site açıldığında rastgele bir soru gösterir
+  soruAlani.innerHTML = sorular[soruSayisiUret()];
+
 };
 
 xhr.send();
-
-// Site açıldığında 
-window.onload = function() {
-    sayi = soruSayisiUret();
-    soruAlani.innerHTML = sorular[sayi];
-}
 
 // soruUret düğmesine tıklanıldığında rastgele bir soru gösterir
 soruUret.addEventListener("click", function() {
@@ -44,8 +42,6 @@ soruKopyala.addEventListener("click", function() {
         basarili.style.display = "none";
     }, 2000);
 });
-
-
 
 
 
