@@ -26,7 +26,7 @@ Katkılara her zaman açığım !
 Katıkıda bulunabileceğiniz durumlar ;
 
 - Gelmesi planlanan özelliklerin geliştirilmesi
-- Sorular.json giderek son soru örneğin soru_300 ise chatgpt tanışma sorularını json formatından üret ve soru_300 değerinden başla diyerek sorular ekleyebilirsiniz +50 sorular katkı olarak ekleyeceğim.
-- Özlellik fikri sunmak örn. Gelmesi planlanan özelliklere özellik fikri sunabilirsiniz fikir katkısına açığız onaylandıktan sonra ekleyerek geliştiredebilirsiniz.
+- Sorular.json giderek son soru örneğin soru_300 ise chatgpt tanışma sorularını json formatından üret ve soru_300 değerinden başla diyerek sorular ekleyebilirsiniz +50 eklenen soruları katkı olarak ekleyeceğim.
+- Özellik fikri sunmak örn. Gelmesi planlanan özelliklere özellik fikri sunabilirsiniz fikir katkısına açığız onaylandıktan sonra ekleyerek geliştiredebilirsiniz.
 
   
