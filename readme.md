@@ -15,6 +15,10 @@ Demo siteye buraya tıklayarak ulaşabilirsiniz: [https://flort-sorulari.alicang
 
 İssue üzerinden takip edebilirsiniz.
 
+## Nasıl Kullanılır?
+
+[Scribe ile nasıl kullanıldığına göz atın!](https://scribehow.com/shared/Flort_Zamani_Tikandiginda_Soru_Uret_ve_WhatsApptan_Paylas__lh6kw0CKQuqbYekdW1Z4bg)
+
 ## Katkı
 
 Katkılara her zaman açığız!
