@@ -12,6 +12,7 @@ let gecilenSoruAdeti = document.querySelector("#gecilenSoruAdeti");
 let header = document.getElementById("header");
 let banner = document.getElementById("banner");
 let bannerButton = document.getElementById("banner-button");
+let whatsAppGonder = document.getElementById("whatsAppGonder");
 
 // Soruları tutacağımız dizi & soru indexlerini tutacağımız dizi
 const sorular = [];
@@ -122,4 +123,10 @@ oncekiSoru.addEventListener("click", function () {
 bannerButton.addEventListener("click", function () {
   banner.style.display = "none";
   header.style.paddingTop = "3rem";
+});
+
+// Whatsapp paylaşma
+whatsAppGonder.addEventListener("click", function () {
+  let whatsappLink = `https://api.whatsapp.com/send?text=${soruAlani.innerHTML}`;
+  window.open(whatsappLink, "_blank");
 });
