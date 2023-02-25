@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flört Soru Makinesi</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TCVS9DQN3"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2TCVS9DQN3"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-2TCVS9DQN3');
+      gtag("config", "G-2TCVS9DQN3");
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
   </head>
   <body>
-    <div id="sorularBitti" style="display: none;">
+    <div id="sorularBitti" style="display: none">
       <h1>Sorular bitti aslanım olmuyorsa olmuyordur zorlama</h1>
     </div>
     <div class="container" id="genelAlan">
       <h1>Flört ederken tıkandığında soru üret !</h1>
       <code id="soruAdeti" class="ortala"></code>
-      <br>
-        <textarea id="soruAlani" class="soruFont" disabled>Soru</textarea>
-        <div class="button-container">
-          <button id="soruUret" type="button">Soru Üret <i class="bi bi-arrow-clockwise"></i></button>
-          <button id="soruKopyala" type="button">Kopyala <i class="bi bi-clipboard"></i></button>
-        </div>
-        <br>
-        <div class="button-container">
-          <button id="oncekiSoru" type="button">Önceki Soru <i class="bi bi-arrow-left"></i></button>
-        </div>
-            <div id="basarili" class="kopyalama" style="display: none;">
-            Kopyalandı 😉
-            </div>
-
+      <br />
+      <textarea id="soruAlani" class="soruFont" disabled>Soru</textarea>
+      <div class="button-container">
+        <button id="soruUret" type="button">
+          Soru Üret <i class="bi bi-arrow-clockwise"></i>
+        </button>
+        <button id="soruKopyala" type="button">
+          Kopyala <i class="bi bi-clipboard"></i>
+        </button>
+      </div>
+      <br />
+      <div class="button-container">
+        <button id="oncekiSoru" type="button">
+          Önceki Soru <i class="bi bi-arrow-left"></i>
+        </button>
+      </div>
+      <div id="basarili" class="kopyalama" style="display: none">
+        Kopyalandı 😉
+      </div>
     </div>
   </body>
   <script src="./script/main.js"></script>
 </html>
-
