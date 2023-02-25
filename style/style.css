@@ -86,6 +86,7 @@ footer p {
   border-radius: 12px;
   width: 100%;
   resize: none;
+  overflow: hidden;
 }
 
 textarea {
