@@ -10,9 +10,11 @@ let sorularBitti = document.querySelector("#sorularBitti");
 let video = document.querySelector("#video");
 let gecilenSoruAdeti = document.querySelector("#gecilenSoruAdeti");
 
+// Soruları tutacağımız dizi & soru indexlerini tutacağımız dizi
 const sorular = [];
-const soruIndexler = []; // yeni dizi
+const soruIndexler = []; 
 
+// Soru sayısı üretir
 function soruSayisiUret() {
   let index;
   if (sorular.length === soruIndexler.length) {
@@ -30,9 +32,11 @@ function soruSayisiUret() {
     return index;
   }
 }
+// Önceki soru kontrolü
 function oncekiSoruKontrol() {
   return soruIndexler.length === 0;
 }
+// Önceki soru butonunu kontrol eder
 function oncekiButtonKontrol() {
   if (oncekiSoruKontrol()) {
     oncekiSoru.style.display = "none";
@@ -80,6 +84,7 @@ soruUret.addEventListener("click", function () {
 // soruKopyala düğmesine tıklanıldığında soruAlani içindeki metni panoya kopyalar
 soruKopyala.addEventListener("click", function () {
   navigator.clipboard.writeText(soruAlani.innerHTML);
+  // Toastify ile kopyalandı yazısı gösterir
   Toastify({
     text: "Kopyalandı 😉",
     style: {
