@@ -13,30 +13,38 @@ const sorular = [];
 const soruIndexler = []; // yeni dizi
 
 function soruSayisiUret() {
-    let index;
-    if (sorular.length === soruIndexler.length) { // Sorular bittiğinde boşalt
-        genelAlan.style.display = "none";
-        sorularBitti.style.display = "";
-        setInterval(function() {
-            location.reload();
-        }, 5000);
-
-    }
-    else {
-      do {
-        index = Math.floor(Math.random() * sorular.length);
+  let index;
+  if (sorular.length === soruIndexler.length) {
+    // Sorular bittiğinde boşalt
+    genelAlan.style.display = "none";
+    sorularBitti.style.display = "";
+    setInterval(function () {
+      location.reload();
+    }, 5000);
+  } else {
+    do {
+      index = Math.floor(Math.random() * sorular.length);
     } while (soruIndexler.includes(index)); // daha önce üretilmişse tekrar dene
     soruIndexler.push(index);
     return index;
-    }
+  }
 }
-
+function oncekiSoruKontrol() {
+  return soruIndexler.length === 0;
+}
+function oncekiButtonKontrol() {
+  if (oncekiSoruKontrol()) {
+    oncekiSoru.style.display = "none";
+  } else {
+    oncekiSoru.style.display = "block";
+  }
+}
 // XMLHttpRequest (XHR) kullanarak sorular.json dosyasını okuyoruz
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '../json/sorular.json', true);
-xhr.responseType = 'json';
+xhr.open("GET", "../json/sorular.json", true);
+xhr.responseType = "json";
 
-xhr.onload = function() {
+xhr.onload = function () {
   // JSON verilerini bir objeye atıyoruz
   const sorularObj = xhr.response;
 
@@ -48,34 +56,36 @@ xhr.onload = function() {
   // Site açıldığında rastgele bir soru gösterir
   soruAlani.innerHTML = sorular[soruSayisiUret()];
   soruAdeti.innerHTML = "Güncel soru sayısı :  " + sorular.length;
-
 };
 
 xhr.send();
 
+// düğmelere tıklandığında oncekiSoru kontrolü yapar
+document.addEventListener("click", function (e) {
+  oncekiButtonKontrol();
+});
+
 // soruUret düğmesine tıklanıldığında rastgele bir soru gösterir
-soruUret.addEventListener("click", function() {
+soruUret.addEventListener("click", function () {
   sayi = soruSayisiUret();
   soruAlani.innerHTML = sorular[sayi];
 });
 
 // soruKopyala düğmesine tıklanıldığında soruAlani içindeki metni panoya kopyalar
-soruKopyala.addEventListener("click", function() {
-    navigator.clipboard.writeText(soruAlani.innerHTML);
-    basarili.style.display = "";
-    setTimeout(function() {
-        basarili.style.display = "none";
-    }, 2000);
+soruKopyala.addEventListener("click", function () {
+  navigator.clipboard.writeText(soruAlani.innerHTML);
+  basarili.style.display = "";
+  setTimeout(function () {
+    basarili.style.display = "none";
+  }, 2000);
 });
 
 // oncekiSoru düğmesine tıklanıldığında önceki soruyu gösterir
-oncekiSoru.addEventListener("click", function() {
+oncekiSoru.addEventListener("click", function () {
   soruIndexler.pop();
-  if (soruIndexler.length === 0) {
+  if (oncekiSoruKontrol()) {
     soruAlani.innerHTML = "İyi anarya yaptın he :)";
   } else {
     soruAlani.innerHTML = sorular[soruIndexler[soruIndexler.length - 1]];
   }
 });
-
-
