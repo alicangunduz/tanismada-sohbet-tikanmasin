@@ -109,3 +109,15 @@ oncekiSoru.addEventListener("click", function () {
     soruAlani.innerHTML = sorular[soruIndexler[soruIndexler.length - 1]];
   }
 });
+
+function whatsappGonder() {
+  const telefonNumarasi = document.querySelector("#telefonNumarasi").value;
+  const soru = soruAlani.value;
+  const encodedSoru = encodeURIComponent(soru);
+  //window.location.href = `https://web.whatsapp.com/send?phone=${telefonNumarasi}&text=${encodedSoru}`;
+  const wplink = document.createElement("a");
+  wplink.href = `https://web.whatsapp.com/send?phone=${telefonNumarasi}&text=${encodedSoru}`;
+  wplink.target = "_blank";
+  wplink.click();
+}
+
