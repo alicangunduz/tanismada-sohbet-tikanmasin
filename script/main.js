@@ -9,10 +9,13 @@ let genelAlan = document.querySelector("#genelAlan");
 let sorularBitti = document.querySelector("#sorularBitti");
 let video = document.querySelector("#video");
 let gecilenSoruAdeti = document.querySelector("#gecilenSoruAdeti");
+let header = document.getElementById("header");
+let banner = document.getElementById("banner");
+let bannerButton = document.getElementById("banner-button");
 
 // Soruları tutacağımız dizi & soru indexlerini tutacağımız dizi
 const sorular = [];
-const soruIndexler = []; 
+const soruIndexler = [];
 
 // Soru sayısı üretir
 function soruSayisiUret() {
@@ -62,7 +65,7 @@ xhr.onload = function () {
   soruAlani.innerHTML = sorular[soruSayisiUret()];
   soruAdeti.innerHTML = `<p>Güncel soru sayısı : <span class="soruSayisi"> ${sorular.length}</span>
   <br>
-  Gösterilen soru sayısı : <span class="soruSayisi"> ${soruIndexler.length}</span></p>`
+  Gösterilen soru sayısı : <span class="soruSayisi"> ${soruIndexler.length}</span></p>`;
 };
 
 xhr.send();
@@ -78,7 +81,7 @@ soruUret.addEventListener("click", function () {
   soruAlani.innerHTML = sorular[sayi];
   soruAdeti.innerHTML = `<p>Güncel soru sayısı : <span class="soruSayisi"> ${sorular.length}</span>
   <br>
-  Gösterilen soru sayısı : <span class="soruSayisi"> ${soruIndexler.length}</span></p>`
+  Gösterilen soru sayısı : <span class="soruSayisi"> ${soruIndexler.length}</span></p>`;
 });
 
 // soruKopyala düğmesine tıklanıldığında soruAlani içindeki metni panoya kopyalar
@@ -99,9 +102,9 @@ soruKopyala.addEventListener("click", function () {
       right: "0",
       marginRight: "10px",
       paddingRight: "20px",
-      boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)"
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+      zIndex: 9999,
     },
-     
   }).showToast();
 });
 
@@ -113,4 +116,10 @@ oncekiSoru.addEventListener("click", function () {
   } else {
     soruAlani.innerHTML = sorular[soruIndexler[soruIndexler.length - 1]];
   }
+});
+
+// banner açıp kapatma
+bannerButton.addEventListener("click", function () {
+  banner.style.display = "none";
+  header.style.paddingTop = "3rem";
 });
