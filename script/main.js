@@ -76,11 +76,21 @@ soruKopyala.addEventListener("click", function () {
   navigator.clipboard.writeText(soruAlani.innerHTML);
   Toastify({
     text: "Kopyalandı 😉",
-    className: "info",
     style: {
-      background: "white",
-      color: "black",
+      backgroundColor: "#B83051",
+      color: "#fff",
+      padding: "12px 16px",
+      borderRadius: "10px",
+      opacity: 0.95,
+      transition: "opacity 0.3s ease-in-out",
+      position: "absolute",
+      top: "0",
+      right: "0",
+      marginRight: "10px",
+      paddingRight: "20px",
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)"
     },
+     
   }).showToast();
 });
 
