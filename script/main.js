@@ -33,7 +33,7 @@ function soruSayisiUret() {
 
 // XMLHttpRequest (XHR) kullanarak sorular.json dosyasını okuyoruz
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'sorular.json', true);
+xhr.open('GET', '../json/sorular.json', true);
 xhr.responseType = 'json';
 
 xhr.onload = function() {
@@ -44,7 +44,7 @@ xhr.onload = function() {
   for (let soru in sorularObj) {
     sorular.push(sorularObj[soru]);
   }
-  
+
   // Site açıldığında rastgele bir soru gösterir
   soruAlani.innerHTML = sorular[soruSayisiUret()];
   soruAdeti.innerHTML = "Güncel soru sayısı :  " + sorular.length;
