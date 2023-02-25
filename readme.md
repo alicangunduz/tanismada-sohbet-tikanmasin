@@ -1,32 +1,28 @@
+## Tanışma Sorusu Üretici
 
-## Demo
+Proje, tanışma aşamasında soru bulamayan ve sohbetin tıkandığı noktalarda yardımcı olan bir araçtır. Proje, 500'den fazla soru içeriği ile daha hızlı bir şekilde tanışmanızı ve sohbet konularını açmanızı sağlamaktadır.
 
-[Demo siteye buraya tıklayarak ulaşabilirsiniz](https://flort-sorulari.alicangunduz.dev/)
-# Tanışma sorusu üretici
+Demo siteye buraya tıklayarak ulaşabilirsiniz: [https://flort-sorulari.alicangunduz.dev/](https://flort-sorulari.alicangunduz.dev/)
 
-Proje tanışma aşamasında soru bulamayan ve sohbetin tıknamaya gittiği noktada yardımınıza koşan bir proje +300'den fazla soru içeriği ile daha hızlı tanışmanız sohbet konusu açılmasını sağlamaktadır.
-
-
-## Özellikler
+### Özellikler
 
 - Rastgele soru getirme
 - Soruyu panoya kopyalama
+- Önceki sorulara dönebilme
+- Whatsapp ile paylaşma
 
-
-  
-## Gelmesi planlanan özellikler
+### Gelmesi Planlanan Özellikler
 
 - Soru cinsiyet özelliği
-- Soru türü arkadaş , flört vb.
-- Soru gönderme butonları
-## Katkı
+- Soru türü: arkadaş, flört vb.
+- Soru çevirisi
 
-Katkılara her zaman açığım !
+### Katkı
 
-Katıkıda bulunabileceğiniz durumlar ;
+Katkılara her zaman açığız!
+
+Katkıda bulunabileceğiniz durumlar:
 
 - Gelmesi planlanan özelliklerin geliştirilmesi
-- Sorular.json giderek son soru örneğin soru_300 ise chatgpt tanışma sorularını json formatından üret ve soru_300 değerinden başla diyerek sorular ekleyebilirsiniz +50 eklenen soruları katkı olarak ekleyeceğim.
-- Özellik fikri sunmak örn. Gelmesi planlanan özelliklere özellik fikri sunabilirsiniz fikir katkısına açığız onaylandıktan sonra ekleyerek geliştiredebilirsiniz.
-
-  
+- Sorular.json dosyasına son sorudan (örneğin, soru_300) başlayarak, ChatGPT kullanılarak üretilen yeni soruları ekleyebilirsiniz. Eklediğiniz her 50 soru için katkıda bulunmuş sayılacaksınız.
+- Özellik fikri sunmak: Gelmesi planlanan özelliklere fikirler sunabilirsiniz. Fikirlerinizi paylaşmak için açığız, onaylandıktan sonra ekleyerek projeyi geliştirebilirsiniz.
