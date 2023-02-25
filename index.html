@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flört Soru Makinesi</title>
-    <link rel="stylesheet" href="./style/style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-2TCVS9DQN3"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-2TCVS9DQN3");
-    </script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-    <!-- Toastify -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-  </head>
-  <body>
-    <div id="sorularBitti" style="display: none">
-      <h1>Sorular bitti aslanım olmuyorsa olmuyordur zorlama</h1>
-    </div>
-    <div class="container" id="genelAlan">
-      <h1>Flört ederken tıkandığında soru üret !</h1>
-      <code id="soruAdeti" class="ortala"></code>
-      <br />
-      <textarea id="soruAlani" class="soruFont" disabled>Soru</textarea>
-      <div class="button-container">
-        <button id="soruUret" type="button">
-          Soru Üret <i class="bi bi-arrow-clockwise"></i>
-        </button>
-        <button id="soruKopyala" type="button">
-          Kopyala <i class="bi bi-clipboard"></i>
-        </button>
-      </div>
-      <br />
-      <div class="button-container">
-        <button id="oncekiSoru" type="button">
-          Önceki Soru <i class="bi bi-arrow-left"></i>
-        </button>
-      </div>
-    </div>
-  </body>
-  <script src="./script/main.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flört Soru Makinesi</title>
+  <link rel="stylesheet" href="./style/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TCVS9DQN3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-2TCVS9DQN3");
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
   <!-- Toastify -->
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/toastify-js"
-  ></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+</head>
+
+<body>
+  <nav><img src="assets/logo.svg" alt=""></nav>
+  <div id="sorularBitti" style="display: none">
+    <h1>Sorular bitti aslanım olmuyorsa olmuyordur zorlama</h1>
+  </div>
+  <div class="container modal" id="genelAlan">
+    <img src="assets/heart-illustration.svg" alt="">
+    <h1>Flört zamanı tıkandığında zorlanma, soru üret!</h1>
+    <code id="soruAdeti" class="ortala"></code>
+    <div class="question-area"><textarea id="soruAlani" class="soruFont question-box" disabled>Soru</textarea>
+      <button class="copy-button" id="soruKopyala" type="button"><i class="ri-clipboard-line"></i>
+      </button>
+    </div>
+
+    <div class="button-container">
+      <button class="secondary-button" id="oncekiSoru" type="button">
+        Önceki Soru <i class="ri-arrow-go-back-line"></i>
+      </button>
+      <button class="primary-button" id="soruUret" type="button">
+        Soru Üret <i class="ri-refresh-line"></i>
+      </button>
+
+    </div>
+  </div>
+  <footer><p class="crafted-by">
+    Crafted by: <a target="_blank" href="https://github.com/alicangunduz" class="link">@alicangunduz</a>
+  </p></footer>
+</body>
+<script src="./script/main.js"></script>
+<!-- Toastify -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </html>
