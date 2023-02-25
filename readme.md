@@ -13,9 +13,7 @@ Demo siteye buraya tıklayarak ulaşabilirsiniz: [https://flort-sorulari.alicang
 
 ### Gelmesi Planlanan Özellikler
 
-- Soru cinsiyet özelliği
-- Soru türü: arkadaş, flört vb.
-- Soru çevirisi
+İssue üzerinden takip edebilirsiniz.
 
 ### Katkı
 
@@ -23,6 +21,6 @@ Katkılara her zaman açığız!
 
 Katkıda bulunabileceğiniz durumlar:
 
-- Gelmesi planlanan özelliklerin geliştirilmesi
+- İssue atmamış görevleri alabilirsiniz. 
 - Sorular.json dosyasına son sorudan (örneğin, soru_300) başlayarak, ChatGPT kullanılarak üretilen yeni soruları ekleyebilirsiniz. Eklediğiniz her 50 soru için katkıda bulunmuş sayılacaksınız.
 - Özellik fikri sunmak: Gelmesi planlanan özelliklere fikirler sunabilirsiniz. Fikirlerinizi paylaşmak için açığız, onaylandıktan sonra ekleyerek projeyi geliştirebilirsiniz.
