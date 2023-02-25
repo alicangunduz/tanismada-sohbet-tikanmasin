@@ -17,14 +17,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   </head>
   <body>
-    <div class="container">
+    <div id="sorularBitti" style="display: none;">
+      <h1>Sorular bitti aslanım olmuyorsa olmuyordur zorlama</h1>
+      <center><img src="zorlama.gif" alt="" width="250" height="400"></center>
+    </div>
+    <div class="container" id="genelAlan">
       <h1>Flört ederken tıkandığında soru üret !</h1>
       <code id="soruAdeti" class="ortala"></code>
       <br>
-        <textarea id="soruAlani" disabled>Soru</textarea>
+        <textarea id="soruAlani" class="soruFont" disabled>Soru</textarea>
         <div class="button-container">
           <button id="soruUret" type="button">Soru Üret <i class="bi bi-arrow-clockwise"></i></button>
           <button id="soruKopyala" type="button">Kopyala <i class="bi bi-clipboard"></i></button>
+        </div>
+        <br>
+        <div class="button-container">
+          <button id="oncekiSoru" type="button">Önceki Soru <i class="bi bi-arrow-left"></i></button>
         </div>
             <div id="basarili" class="kopyalama" style="display: none;">
             Kopyalandı 😉
