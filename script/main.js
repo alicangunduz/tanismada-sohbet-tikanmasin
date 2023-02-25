@@ -55,7 +55,7 @@ xhr.onload = function () {
 
   // Site açıldığında rastgele bir soru gösterir
   soruAlani.innerHTML = sorular[soruSayisiUret()];
-  soruAdeti.innerHTML = "Güncel soru sayısı :  " + sorular.length;
+  soruAdeti.innerHTML = `<p>Güncel soru sayısı : <span class="soruSayisi"> ${sorular.length}</span></p>`
 };
 
 xhr.send();

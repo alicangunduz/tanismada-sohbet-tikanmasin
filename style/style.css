@@ -36,6 +36,12 @@ footer p {
   color: #21040B;
 }
 
+.soruSayisi{
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.04em;
+  color: #DA3B3B;
+}
 .soruFont {
   font-style: normal;
   font-size: 14px;
