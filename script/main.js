@@ -74,10 +74,14 @@ soruUret.addEventListener("click", function () {
 // soruKopyala düğmesine tıklanıldığında soruAlani içindeki metni panoya kopyalar
 soruKopyala.addEventListener("click", function () {
   navigator.clipboard.writeText(soruAlani.innerHTML);
-  basarili.style.display = "";
-  setTimeout(function () {
-    basarili.style.display = "none";
-  }, 2000);
+  Toastify({
+    text: "Kopyalandı 😉",
+    className: "info",
+    style: {
+      background: "white",
+      color: "black",
+    },
+  }).showToast();
 });
 
 // oncekiSoru düğmesine tıklanıldığında önceki soruyu gösterir
