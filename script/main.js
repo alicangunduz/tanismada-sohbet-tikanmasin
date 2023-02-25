@@ -80,6 +80,7 @@ soruUret.addEventListener("click", function () {
 // soruKopyala düğmesine tıklanıldığında soruAlani içindeki metni panoya kopyalar
 soruKopyala.addEventListener("click", function () {
   navigator.clipboard.writeText(soruAlani.innerHTML);
+  // Toastify ile kopyalandı yazısı gösterir
   Toastify({
     text: "Kopyalandı 😉",
     style: {
