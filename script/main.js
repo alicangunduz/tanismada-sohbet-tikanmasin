@@ -8,6 +8,7 @@ let oncekiSoru = document.querySelector("#oncekiSoru");
 let genelAlan = document.querySelector("#genelAlan");
 let sorularBitti = document.querySelector("#sorularBitti");
 let video = document.querySelector("#video");
+let gecilenSoruAdeti = document.querySelector("#gecilenSoruAdeti");
 
 const sorular = [];
 const soruIndexler = []; // yeni dizi
@@ -55,7 +56,9 @@ xhr.onload = function () {
 
   // Site açıldığında rastgele bir soru gösterir
   soruAlani.innerHTML = sorular[soruSayisiUret()];
-  soruAdeti.innerHTML = `<p>Güncel soru sayısı : <span class="soruSayisi"> ${sorular.length}</span></p>`
+  soruAdeti.innerHTML = `<p>Güncel soru sayısı : <span class="soruSayisi"> ${sorular.length}</span>
+  <br>
+  Gösterilen soru sayısı : <span class="soruSayisi"> ${soruIndexler.length}</span></p>`
 };
 
 xhr.send();
@@ -69,6 +72,9 @@ document.addEventListener("click", function (e) {
 soruUret.addEventListener("click", function () {
   sayi = soruSayisiUret();
   soruAlani.innerHTML = sorular[sayi];
+  soruAdeti.innerHTML = `<p>Güncel soru sayısı : <span class="soruSayisi"> ${sorular.length}</span>
+  <br>
+  Gösterilen soru sayısı : <span class="soruSayisi"> ${soruIndexler.length}</span></p>`
 });
 
 // soruKopyala düğmesine tıklanıldığında soruAlani içindeki metni panoya kopyalar
