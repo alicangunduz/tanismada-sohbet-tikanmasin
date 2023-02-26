@@ -2,7 +2,7 @@
 
 Proje, tanışma aşamasında soru bulamayan ve sohbetin tıkandığı noktalarda yardımcı olan bir araçtır. Proje, 500'den fazla soru içeriği ile daha hızlı bir şekilde tanışmanızı ve sohbet konularını açmanızı sağlamaktadır.
 
-Demo siteye buraya tıklayarak ulaşabilirsiniz: [https://flort-sorulari.alicangunduz.dev/](https://flort-sorulari.alicangunduz.dev/)
+Demo siteye buraya tıklayarak ulaşabilirsiniz: [https://flort-sorulari.vercel.app/](https://flort-sorulari.vercel.app/)
 
 ## Özellikler
 
