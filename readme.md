@@ -21,7 +21,7 @@ Proje tanışma aşamasında soru bulamayan ve sohbetin tıknamaya gittiği nokt
 - Soru gönderme butonları
 ## Katkı
 
-Katkılara her zaman açığım !
+Katkılara her zaman açığım ! 
 
 Katıkıda bulunabileceğiniz durumlar ;
 
