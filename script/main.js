@@ -132,7 +132,6 @@ whatsAppGonder.addEventListener("click", function () {
   window.open(whatsappLink, "_blank");
 });
 
-<<<<<<< Updated upstream
 // Katkıda bulunanlar çekme
 fetch("https://api.github.com/repos/alicangunduz/tanismada-sohbet-tikanmasin/contributors")
   .then((response) => response.json())
@@ -162,7 +161,3 @@ fetch("https://api.github.com/repos/alicangunduz/tanismada-sohbet-tikanmasin/con
     }
   })
   .catch((error) => console.error(error));
-=======
-
-
->>>>>>> Stashed changes
