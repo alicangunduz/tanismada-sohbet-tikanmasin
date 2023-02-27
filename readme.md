@@ -1,32 +1,30 @@
+# Tanışma Sorusu Üretici
 
-## Demo
+Proje, tanışma aşamasında soru bulamayan ve sohbetin tıkandığı noktalarda yardımcı olan bir araçtır. Proje, 500'den fazla soru içeriği ile daha hızlı bir şekilde tanışmanızı ve sohbet konularını açmanızı sağlamaktadır.
 
-[Demo siteye buraya tıklayarak ulaşabilirsiniz](https://flort-sorulari.alicangunduz.dev/)
-# Tanışma sorusu üretici
-
-Proje tanışma aşamasında soru bulamayan ve sohbetin tıknamaya gittiği noktada yardımınıza koşan bir proje +300'den fazla soru içeriği ile daha hızlı tanışmanız sohbet konusu açılmasını sağlamaktadır.
-
+Demo siteye buraya tıklayarak ulaşabilirsiniz: [https://flort-sorulari.vercel.app/](https://flort-sorulari.vercel.app/)
 
 ## Özellikler
 
 - Rastgele soru getirme
 - Soruyu panoya kopyalama
+- Önceki sorulara dönebilme
+- Whatsapp ile paylaşma
 
+## Gelmesi Planlanan Özellikler
 
-  
-## Gelmesi planlanan özellikler
+İssue üzerinden takip edebilirsiniz.
 
-- Soru cinsiyet özelliği
-- Soru türü arkadaş , flört vb.
-- Soru gönderme butonları
+## Nasıl Kullanılır?
+
+[Scribe ile nasıl kullanıldığına göz atın!](https://scribehow.com/shared/Flort_Zamani_Tikandiginda_Soru_Uret_ve_WhatsApptan_Paylas__lh6kw0CKQuqbYekdW1Z4bg)
+
 ## Katkı
 
-Katkılara her zaman açığım !
+Katkılara her zaman açığız!
 
-Katıkıda bulunabileceğiniz durumlar ;
+Katkıda bulunabileceğiniz durumlar:
 
-- Gelmesi planlanan özelliklerin geliştirilmesi
-- Sorular.json giderek son soru örneğin soru_300 ise chatgpt tanışma sorularını json formatından üret ve soru_300 değerinden başla diyerek sorular ekleyebilirsiniz +50 eklenen soruları katkı olarak ekleyeceğim.
-- Özellik fikri sunmak örn. Gelmesi planlanan özelliklere özellik fikri sunabilirsiniz fikir katkısına açığız onaylandıktan sonra ekleyerek geliştiredebilirsiniz.
-
-  
+- İssue atmamış görevleri alabilirsiniz.
+- Sorular.json dosyasına son sorudan (örneğin, soru_300) başlayarak, ChatGPT kullanılarak üretilen yeni soruları ekleyebilirsiniz. Eklediğiniz her 50 soru için katkıda bulunmuş sayılacaksınız.
+- Özellik fikri sunmak: Gelmesi planlanan özelliklere fikirler sunabilirsiniz. Fikirlerinizi paylaşmak için açığız, onaylandıktan sonra ekleyerek projeyi geliştirebilirsiniz.
