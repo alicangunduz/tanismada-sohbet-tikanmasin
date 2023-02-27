@@ -13,6 +13,7 @@ let header = document.getElementById("header");
 let banner = document.getElementById("banner");
 let bannerButton = document.getElementById("banner-button");
 let whatsAppGonder = document.getElementById("whatsAppGonder");
+let contributors = document.getElementById("contributors");
 
 // Soruları tutacağımız dizi & soru indexlerini tutacağımız dizi
 const sorular = [];
@@ -130,3 +131,35 @@ whatsAppGonder.addEventListener("click", function () {
   let whatsappLink = `https://api.whatsapp.com/send?text=${soruAlani.innerHTML}`;
   window.open(whatsappLink, "_blank");
 });
+
+// Katkıda bulunanlar çekme
+fetch("https://api.github.com/repos/alicangunduz/tanismada-sohbet-tikanmasin/contributors")
+  .then((response) => response.json())
+  .then(async (data) => {
+    for (const contributor of data) {
+      const contributorName = contributor.login;
+      const contributorAvatar = contributor.avatar_url;
+      const commitsResponse = await fetch(`https://api.github.com/repos/alicangunduz/tanismada-sohbet-tikanmasin/commits?author=${contributorName}`);
+      const commitsData = await commitsResponse.json();
+      const contributorCommits = commitsData.length;
+      const isOwner = contributorName === "alicangunduz" ? '<span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">Owner</span>' : '';
+      contributors.innerHTML += `
+        <div class="flex items-center space-x-4">
+          <a href="https://github.com/alicangunduz/tanismada-sohbet-tikanmasin/commits?author=${contributorName}">
+            <img class="w-10 h-10 rounded-full" src="${contributorAvatar}" alt="${contributorName}">
+          </a>
+          <div class="font-medium dark:text-dark">
+            <a href="https://github.com/alicangunduz/tanismada-sohbet-tikanmasin/commits?author=${contributorName}">
+              <div>${contributorName} ${isOwner}</div>
+            </a>
+            <a href="https://github.com/alicangunduz/tanismada-sohbet-tikanmasin/commits?author=${contributorName}">
+              <div class="text-sm text-gray-500 dark:text-gray-400">${contributorCommits} commits</div>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+  })
+  .catch((error) => console.error(error));
+
+
